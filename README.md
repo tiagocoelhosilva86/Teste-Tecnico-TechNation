@@ -5,3 +5,6 @@ Projeto técnico desenvolvido para finalidade  de controle de notas e gestão de
 * HTML
 * CSS
 * JS
+
+### Ferramentas Utilizadas 
+* Visual Studio Code
