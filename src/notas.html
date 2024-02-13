@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de notas fiscais</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/notas.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/0bd5e8ac75.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="page">
+      <!-- MENU LATERAL -->
+      <section class="menu-lateral">
+        <div class="container-menu">
+          <div class="container-logo">
+            <i class="fa-brands fa-accusoft fa-2xl"></i>
+            <span class="texto-logo">Accusoft</span>
+          </div>
+          <nav class="container-btn">
+            <button class="btn-menu">
+              <i class="fa-solid fa-chart-line fa-2xl"></i>
+              Dashboard
+            </button>
+            <button class="btn-menu">
+              <i class="fa-solid fa-file-invoice-dollar fa-2xl"></i>
+              Customers
+            </button>
+            <button class="btn-menu">
+              <i class="fa-solid fa-compass-drafting fa-2xl"></i>
+              Projects
+            </button>
+            <button class="btn-menu">
+              <i class="fa-regular fa-clipboard fa-2xl"></i>
+              Orders
+            </button>
+            <button class="btn-menu">
+              <i class="fa-solid fa-warehouse fa-2xl"></i>
+              Inventory
+            </button>
+            <button class="btn-menu">
+              <i class="fa-regular fa-circle-user fa-2xl"></i>
+              Accounts
+            </button>
+            <button class="btn-menu">
+              <i class="fa-solid fa-compass-drafting fa-2xl"></i>
+              Tasks
+            </button>
+          </nav>
+        </div>
+      </section>
+      <!-- FIM MENU LATERAL -->
+
+      <div class="container">
+        <!-- Cabecario -->
+        <header class="cabecario">
+          <div class="logo">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+            <span class="texto-menu font-inter">Notas emitidas</span>
+          </div>
+          <div class="buscar">
+            <input type="search" />
+          </div>
+        </header>
+        <!--FIM - Cabecario -->
+
+        <!-- Conteudo -->
+        <div class="conteudo">
+          <div class="card">
+            <div class="card-title">
+              <h1>Filtro notas fiscais</h1>
+            </div>
+
+            <div class="card-body">
+              <form action="">
+                <!-- <div class="linha">
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Nome do pagador</span>
+                      <input
+                        type="text"
+                        class="input_form"
+                        name="nome"
+                        id="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Número de identificação da nota</span>
+                      <input
+                        type="texte"
+                        class="input_form"
+                        name="identificadorNota"
+                        id="identificadorNota"
+                      />
+                    </div>
+                  </div>
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Valor da nota</span>
+                      <input
+                        type="texte"
+                        class="input_form"
+                        name="valorNota"
+                        id="valorNota"
+                      />
+                    </div>
+                  </div>
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Documento da nota fiscal</span>
+                      <input
+                        type="texte"
+                        class="input_form"
+                        name="documentoNota"
+                        id="documentoNota"
+                      />
+                    </div>
+                  </div>
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Documento do boleto bancário</span>
+                      <label>
+                        <input
+                          type="texte"
+                          class="input_form"
+                          name="documentoBoleto"
+                          id="documentoBoleto"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="linha">
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Data de emissão da nota</span>
+                      <input
+                        type="date"
+                        class="input_form"
+                        name="dataEmissao"
+                        id="dataEmissao"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Data da cobrança</span>
+                      <label>
+                        <input
+                          type="date"
+                          class="input_form"
+                          name="dataCobrança"
+                          id="dataCobrança"
+                        />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="coluna">
+                    <div class="form-label">
+                      <span>Data do pagamento</span>
+                      <label>
+                        <input
+                          type="date"
+                          class="input_form"
+                          name="dataPagamento"
+                          id="dataPagamento"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="coluna">
+                    <div class="form-label">
+                      <label for="tipos">Status da nota</label>
+                      <select id="statusNota" name="statusNota">
+                        <option value=""></option>
+                        <option value="emitida">Emitida</option>
+                        <option value="cobrancaRealizada">
+                          Cobrança realizada
+                        </option>
+                        <option value="pagamentoAtrasado">
+                          Pagamento em atraso
+                        </option>
+                        <option value="pagamentoRealizado">
+                          Pagamento realizado
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="coluna">
+                    <div class="button-filtar">
+                      <button class="button">Filtrar</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card-table">
+            <div class="card-title">
+              <h1>Notas fiscais</h1>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Pagador</th>
+                  <th>Número da nota</th>
+                  <th>Data emissão</th>
+                  <th>Data cobrança</th>
+                  <th>Data pagamento</th>
+                  <th>Valor</th>
+                  <th>Documento da nota fiscal</th>
+                  <th>Documento boleto</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tiago coelho da silva</td>
+                  <td>2045</td>
+                  <td>12/10/2024</td>
+                  <td>15/11/2024</td>
+                  <td>15/11/2024</td>
+                  <td>R$2000,00</td>
+                  <td>895784</td>
+                  <td>87159</td>
+                  <td>Emitida</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <!-- Conteudo -->
+      </div>
+    </div>
+  </body>
+</html>
